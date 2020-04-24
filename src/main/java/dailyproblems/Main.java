@@ -1,5 +1,6 @@
 package dailyproblems;
 
+import dailyproblems.problems.CheckParenthesesInProgram;
 import dailyproblems.problems.LongestSubstringWithoutRepetition;
 
 public class Main {
@@ -10,5 +11,8 @@ public class Main {
         int solution = LongestSubstringWithoutRepetition.solution("ASDF");
         System.out.println("solution: " + solution);
 
+
+        boolean solution2 = CheckParenthesesInProgram.solution("{{}}}");
+        System.out.println("solution2: " + solution2);
     }
 }

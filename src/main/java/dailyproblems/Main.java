@@ -1,13 +1,12 @@
 package dailyproblems;
 
-import dailyproblems.problems.CheckParenthesesInProgram;
-import dailyproblems.problems.FindFirstAndLastDuplicates;
-import dailyproblems.problems.LongestSubstringWithoutRepetition;
-import dailyproblems.problems.ReverseLinkedList;
+import dailyproblems.problems.*;
 
 import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.List;
 
+import static dailyproblems.utils.ListUtils.printLinkedList;
 import static dailyproblems.utils.ListUtils.printList;
 
 public class Main {
@@ -27,12 +26,16 @@ public class Main {
 
         LinkedList<Integer> linkedList = new LinkedList<>(Arrays.asList(1,2,3,4));
         LinkedList<Integer> solution4 = ReverseLinkedList.solution(linkedList);
-        printList(linkedList);
+        printLinkedList(linkedList);
         System.out.print("iteratively: ");
-        printList(solution4);
+        printLinkedList(solution4);
         LinkedList<Integer> solution5 = ReverseLinkedList.recursiveSolution(linkedList, new LinkedList<>());
         System.out.print("recursively: ");
-        printList(solution5);
+        printLinkedList(solution5);
+
+        List<Integer> solution6 = SortListWith3Uniques.solution(Arrays.asList(3,2,1,1,3,1,2,3,1,2,2,1,3));
+        System.out.println(printList(solution6));
+
     }
 
 }
